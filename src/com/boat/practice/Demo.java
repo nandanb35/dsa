@@ -23,14 +23,6 @@ public class Demo {
 		System.out.println(Arrays.toString(arr));
 	}
 
-	private static void bubbleSort(int arr[]) {
-		
-		for (int unsortedLastIndex = arr.length - 1; unsortedLastIndex > 0 ; unsortedLastIndex--) {
-			
-		}
-		
-	}
-	
 	public static void swap(int arr[], int a, int b) {
 		int temp = 0;
 
