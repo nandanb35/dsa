@@ -38,16 +38,47 @@ public class EmployeeDoublyLinkedList {
 		size++;
 	}
 
-	public void removeFromFront() {
+	public Employee removeFromFront() {
 
+		if (head == null) {
+			return null;
+		}
+
+		EmployeeNode removedNode = head;
+
+		if (removedNode.getNext() == null) {
+			tail = null;
+		} else {
+			head.getNext().setPrevious(null);
+		}
+
+		head = head.getNext();
+		size--;
+		removedNode.setNext(null);
+		return removedNode.getEmployee();
 	}
 
-	public void removeFromEnd() {
+	public Employee removeFromBack() {
 
+		if (tail == null) {
+			return null;
+		}
+
+		EmployeeNode removedNode = tail;
+
+		if (tail.getPrevious() == null) {
+			head = null;
+		} else {
+			tail.getPrevious().setNext(null);
+		}
+
+		tail = tail.getPrevious();
+		size--;
+		return removedNode.getEmployee();
 	}
-
-	public void remove() {
-
+	
+	public int size() {
+		return size;
 	}
 
 	public void print() {

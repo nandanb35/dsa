@@ -15,11 +15,26 @@ public class Demo {
 		EmployeeDoublyLinkedList list = new EmployeeDoublyLinkedList();
 		list.addToFront(kevin);
 		list.addToFront(michale);
+		list.addToFront(jim);
 		list.addToBack(pam);
 		list.addToBack(anjela);
+		list.addToBack(dwight);
 
 		list.print();
+		System.out.println("---> size ---> " + list.size());
+		System.out.println("**** removing from front ***");
 
+		list.removeFromFront();
+
+		list.print();
+		System.out.println("---> size ---> " + list.size());
+
+		list.removeFromBack();
+
+		System.out.println("**** removing from back ***");
+
+		list.print();
+		System.out.println("---> size ---> " + list.size());
 	}
 
 }
